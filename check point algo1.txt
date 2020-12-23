@@ -1,0 +1,22 @@
+ALGORITHM word_calculate
+VAR
+    sentense : STRING
+    Table caracter [] : CHAR;
+    count_word : INTEGER :=0;
+    count_caracter : INTEGER :=0;
+    count_vowel : INTEGER :=0;
+
+BEGIN
+Read(sentense);
+caracter:=sentense;
+WHILE (caracter[count_word <> "."]) DO
+count_caracter++;
+IF (caracter[count_word=" "]) THEN
+    count_word++;
+END_IF
+IF (caracter[count_word] = A OR E OR O OR I OR U OR Y ) THEN
+    count_vowel++;
+END_IF
+    
+END_WHILE
+END
